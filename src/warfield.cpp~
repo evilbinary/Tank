@@ -1,0 +1,185 @@
+/*
+ * warfield.cpp
+ *
+ *  Created on: Aug 27, 2011
+ *      Author: cty
+ */
+
+#include "warfield.h"
+#include <iostream>
+#include <stdlib.h>
+#include "effect.h"
+using namespace std;
+namespace tank {
+
+WarField::WarField() {
+	Init();
+}
+void WarField::Init() {
+	for (int i = 0; i < MAPROW; i++) {
+		for (int j = 0; j < MAPCOL; j++) {
+			if (i % (MAPROW - 1) == 0) {
+				map[i][j] = 4;
+			} else if (j % (MAPCOL - 1) == 0) {
+				map[i][j] = 4;
+			} else {
+
+			map[i][j] = 0; //0 路地 1草地  20 tank0 30 tank1
+
+		}
+	}
+}
+
+}
+void WarField::Draw() {
+	char b[10];
+	for (int y = 0; y < MAPROW; y++) {
+		for (int x = 0; x < MAPCOL; x++) {
+			sprintf(b, "%d", map[y][x]);
+			SDL_Surface * res = this->resourceManager->GetResourceSurfaceByName(b);
+			apply_surface(x * MAPSIZE, y * MAPSIZE, res, this->surface, NULL);
+		}
+	}
+}
+void WarField::DrawGrid() {
+	//网格子
+	for (int y = 0; y < MAPROW; y++) {
+		int jpos = y * MAPSIZE;
+		int jposboder = jpos + MAPSIZE;
+		for (int x = 0; x < MAPCOL; x++) {
+			int ipos = x * MAPSIZE;
+			int iposboder = ipos + MAPSIZE;
+			put_line(this->surface, ipos, jpos, iposboder, jpos, 0xff0000);
+			put_line(this->surface, iposboder, jpos, iposboder, jposboder,
+					0xff0000);
+			put_line(this->surface, ipos, jpos, ipos, jposboder, 0xff0000);
+			put_line(this->surface, ipos, jposboder, iposboder, jposboder,
+					0xff0000);
+
+		}
+	}
+}
+void WarField::DrawRect() {
+
+	SDL_Rect t;
+	t.w = MAPSIZE;
+	t.h = MAPSIZE;
+	for (int y = 0; y < MAPROW; y++) {
+		t.y = y * MAPSIZE;
+		for (int x = 0; x < MAPCOL; x++) {
+			t.x = x * MAPSIZE;
+			if (map[y][x] == 1) {
+				SDL_FillRect(this->surface, &t, 0xffffff);
+			} else if (map[y][x] == 0) {
+				SDL_FillRect(this->surface, &t, 0x000000);
+			} else if (map[y][x] == 5) {
+				SDL_FillRect(this->surface, &t, 0xeeeeee);
+			} else if (map[y][x] == 6) {
+				SDL_FillRect(this->surface, &t, 0x0000ff);
+			} else if (map[y][x] == 7) {
+				SDL_FillRect(this->surface, &t, 0xff0000);
+			}else if (map[y][x] == 8) {
+				SDL_FillRect(this->surface, &t, 0x00ff00);
+			}
+			else if (map[y][x] >=1000&&map[y][x]<2000) {
+//				SDL_FillRect(this->surface, &t, 0x777777);
+//				SDL_FillRect(this->surface, &t, 0x000000);
+			} else if (map[y][x] >= 2000&&map[y][x]<=3000) {
+//				SDL_FillRect(this->surface, &t, 0xeeeeee);
+//				SDL_FillRect(this->surface, &t, 0x000000);
+			}else{
+
+			}
+
+			//			if (SDL_Flip(this->surface) == -1) {
+			//				return;
+			//			}
+		}
+	}
+
+	if (SDL_MUSTLOCK(surface)) {
+		SDL_UnlockSurface( surface);
+	}
+}
+void WarField::SetResourceManager(ResourceManager* resourceManager) {
+	this->resourceManager = resourceManager;
+}
+ResourceManager* WarField::GetResourceManager() {
+	return this->resourceManager;
+}
+void WarField::SetSurface(SDL_Surface * surface) {
+	this->surface = surface;
+}
+void WarField::FillCell(SDL_Rect rect) {
+	int x = rect.x / MAPSIZE;
+	int y = rect.y / MAPSIZE;
+	if ((rect.x - x * MAPSIZE) >= MAPSIZEHALF) {
+		x++;
+	}
+	if ((rect.y - y * MAPSIZE) >= MAPSIZEHALF) {
+		y++;
+	}
+
+	int w = rect.w / MAPSIZE + x;
+	int h = rect.h / MAPSIZE + y;
+
+	for (int j = y; j < h; j++) {
+		for (int i = x; i < w; i++) {
+			map[j][i] = 1;
+		}
+	}
+	SetMap(x, y, 1);
+	//SDL_FillRect(this->surface, &rect, 0x00ff00);
+
+}
+void WarField::FillCell(SDL_Rect rect, int type) {
+	int x = rect.x / MAPSIZE;
+	int y = rect.y / MAPSIZE;
+	if ((rect.x - x * MAPSIZE) >= MAPSIZEHALF) {
+		x++;
+	}
+	if ((rect.y - y * MAPSIZE) >= MAPSIZEHALF) {
+		y++;
+	}
+
+	int w = rect.w / MAPSIZE + x;
+	int h = rect.h / MAPSIZE + y;
+//	cout << "f[" << y << "," << x << "]" << endl;
+	if (w>=MAPCOL||h>=MAPROW||x >=MAPCOL ||x<0|| y >= MAPROW||y<0)
+			return;
+	for (int j = y; j < h; j++) {
+		for (int i = x; i < w; i++) {
+			map[j][i] = type;
+		}
+	}
+	//SetMap(x, y, 1);
+	//SDL_FillRect(this->surface, &rect, 0x00ff00);
+
+}
+void WarField::ClearMap() {
+	for (int j = 0; j < MAPROW; j++) {
+		for (int i = 0; i < MAPCOL; i++) {
+			map[j][i] = 0; //0 路地 1草地  20 tank0 30 tank1
+		}
+	}
+}
+void WarField::SetMap(int x, int y, int type) {
+	if (x >=MAPCOL ||x<0|| y >= MAPROW||y<0)
+				return;
+	map[y][x] = type;
+}
+int WarField::GetMapType(int x, int y) {
+	//	cout<<"yx"<<y<<" ,"<<x<<"="<<map[y][x]<<endl;
+	if (x >=MAPCOL ||x<0|| y >= MAPROW||y<0)
+		return -1;
+	return this->map[y][x];
+}
+void WarField::PrintMap() {
+	for (int j = 0; j < MAPROW; j++) {
+		for (int i = 0; i < MAPCOL; i++) {
+			cout << map[j][i] << " ";
+		}
+		cout << endl;
+	}
+}
+}

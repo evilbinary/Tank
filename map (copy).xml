@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<sound name="bg">
+		<music>bgmusic</music>
+		<chunck>bomb</chunck>
+	</sound>
+
+	<sound name="bomb">
+		<music>bulletbomb</music>
+	</sound>
+
+	<animate name="bomb">
+		<image>tankbomb01</image>
+		<image>tankbomb02</image>
+		<image>tankbomb03</image>
+		<image>tankbomb04</image>
+		<image>tankbomb05</image>
+		<image>tankbomb06</image>
+		<image>tankbomb07</image>
+		<image>tankbomb08</image>
+		<image>tankbomb09</image>
+		<image>tankbomb10</image>
+		<image>tankbomb11</image>
+		<image>tankbomb12</image>
+		<image>tankbomb13</image>
+		<image>tankbomb14</image>
+		<image>tankbomb15</image>
+		<image>tankbomb16</image>
+		<image>tankbomb17</image>
+		<image>tankbomb18</image>
+		<image>tankbomb19</image>
+		<image>tankbomb20</image>
+	</animate>
+
+	<object name="block">
+		<image>block</image>
+		<pos>10,0</pos>
+	</object>
+	<object name="block">
+		<image>block</image>
+		<pos>20,0</pos>
+	</object>
+	<object name="block">
+		<image>block</image>
+		<pos>30,0</pos>
+	</object>
+	<object name="block">
+		<image>block</image>
+		<pos>40,0</pos>
+	</object>
+	<object name="block">
+		<image>block</image>
+		<pos>50,0</pos>
+	</object>
+
+	<object name="block">
+		<image>block</image>
+		<pos>60,0</pos>
+	</object>
+	<object name="road">
+		<image>road</image>
+		<pos>60,60</pos>
+	</object>
+	<object name="green">
+		<image>green</image>
+		<pos>160,160</pos>
+	</object>
+
+	<objects name="home">
+		<object>block</object>
+		<object>block</object>
+	</objects>
+	<object name="green">
+		<image>green</image>
+		<pos>20,10</pos>
+	</object>
+	<object name="green">
+		<image>green</image>
+		<pos>86,183</pos>
+	</object>
+	<object name="green">
+		<image>green</image>
+		<pos>86,183</pos>
+	</object>
+	<object name="green">
+		<image>green</image>
+		<pos>86,183</pos>
+	</object>
+	<object name="green">
+		<image>green</image>
+		<pos>86,183</pos>
+	</object>
+	<object name="green">
+		<image>green</image>
+		<pos>86,183</pos>
+	</object>
+</map>

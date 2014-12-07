@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource>
+
+	<music  name="bgmusic">
+		<path>sound/bgmusic.ogg</path>
+	</music>
+	<image name="tree">
+		<path>image/block/tree.png</path>
+		<size>64,64</size>
+	</image>
+	<chunck name="bomb">
+		<path>sound/bomb.ogg</path>
+	</chunck>
+	<chunck name="shoot">
+		<path>sound/shoot.wav</path>
+	</chunck>
+	<chunck name="tankbomb">
+		<path>sound/tankbomb.wav</path>
+	</chunck>
+	<chunck name="bulletbomb">
+		<path>sound/bulletbomb.wav</path>
+	</chunck>
+
+	<image  name="tank01">
+		<path>image/tank/tank01.png</path>
+		<size>64,64</size>
+	</image>
+	<image  name="tank02">
+		<path>image/tank/tank02.png</path>
+		<size>64,64</size>
+	</image>
+	<image  name="tank03">
+		<path>image/tank/tank03.png</path>
+		<size>64,64</size>
+	</image>
+	<image  name="tank04">
+		<path>image/tank/tank04.png</path>
+		<size>64,64</size>
+	</image>
+	<image  name="bg">
+		<path>image/background/background1.jpg</path>
+		<size>800,600</size>
+	</image>
+	<image  name="block">
+		<path>image/block/block.png</path>
+		<size>16,16</size>
+	</image>
+
+	<image  name="m0">
+		<path>image/bullet/tank_missile01.png</path>
+		<size>64,64</size>
+	</image>
+	<image  name="bullet01">
+		<path>image/bullet/bullet.png</path>
+		<size>64,64</size>
+	</image>
+
+	<image name="tankbomb01">
+		<path>image/tankbomb/bomb01.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb02">
+		<path>image/tankbomb/bomb02.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb03">
+		<path>image/tankbomb/bomb03.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb04">
+		<path>image/tankbomb/bomb04.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb05">
+		<path>image/tankbomb/bomb05.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb06">
+		<path>image/tankbomb/bomb06.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb07">
+		<path>image/tankbomb/bomb07.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb08">
+		<path>image/tankbomb/bomb08.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb09">
+		<path>image/tankbomb/bomb09.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb10">
+		<path>image/tankbomb/bomb10.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb11">
+		<path>image/tankbomb/bomb11.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb12">
+		<path>image/tankbomb/bomb12.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb13">
+		<path>image/tankbomb/bomb13.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb14">
+		<path>image/tankbomb/bomb14.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb15">
+		<path>image/tankbomb/bomb15.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb16">
+		<path>image/tankbomb/bomb16.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb17">
+		<path>image/tankbomb/bomb17.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb18">
+		<path>image/tankbomb/bomb18.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb19">
+		<path>image/tankbomb/bomb19.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="tankbomb20">
+		<path>image/tankbomb/bomb20.png</path>
+		<size>64,64</size>
+	</image>
+
+
+	<image name="bulletbomb1">
+		<path>image/bulletbomb/1.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb2">
+		<path>image/bulletbomb/2.png</path>
+		<size>64,64</size>
+	</image>
+
+	<image name="bulletbomb1">
+		<path>image/bulletbomb/1.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb2">
+		<path>image/bulletbomb/2.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb3">
+		<path>image/bulletbomb/3.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb4">
+		<path>image/bulletbomb/4.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb5">
+		<path>image/bulletbomb/5.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb6">
+		<path>image/bulletbomb/6.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb7">
+		<path>image/bulletbomb/7.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb8">
+		<path>image/bulletbomb/8.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb9">
+		<path>image/bulletbomb/9.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb10">
+		<path>image/bulletbomb/10.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb11">
+		<path>image/bulletbomb/11.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb12">
+		<path>image/bulletbomb/12.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb13">
+		<path>image/bulletbomb/13.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb14">
+		<path>image/bulletbomb/14.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb15">
+		<path>image/bulletbomb/15.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb16">
+		<path>image/bulletbomb/16.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb17">
+		<path>image/bulletbomb/17.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb18">
+		<path>image/bulletbomb/18.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb19">
+		<path>image/bulletbomb/19.png</path>
+		<size>64,64</size>
+	</image>
+	<image name="bulletbomb20">
+		<path>image/bulletbomb/20.png</path>
+		<size>64,64</size>
+	</image>
+
+	<image name="road">
+		<path>image/block/road.png</path>
+		<size>32,24</size>
+	</image>
+	
+	<image name="green">
+		<path>image/block/green.bmp</path>
+		<size>32,31</size>
+	</image>
+	
+	
+	<ai name="enamy0">
+		<path>ai/ai0.lua</path>
+	</ai>
+
+</resource>
+
+

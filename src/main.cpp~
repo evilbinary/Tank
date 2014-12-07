@@ -1,0 +1,21 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Aug 27, 2011
+ *      Author: cty
+ */
+
+#include <iostream>
+#include "game.h"
+
+using namespace tank;
+
+int main(int argc, char* argv[]) {
+	Game game;
+	game.Init();
+	game.Start();
+	game.Loop();
+	game.Exit();
+
+	return 0;
+}
