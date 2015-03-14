@@ -8,3 +8,32 @@
  */
 
 #include "agent.h"
+#include "tank.h"
+#include "game.h"
+#include "warfield.h"
+#include "map.h"
+#include "resource.h"
+
+using namespace tank;
+
+
+
+Map * create_map(WarField *wf){
+    Map *m=new Map(&Game::resourceManager, wf, &Game::objects,&Game::screen );
+    return m;
+}
+
+WarField * create_warfiled(){
+    WarField *w=new WarField();
+    return w;
+}
+
+Tank* create_tank(){
+    Tank* t=new Tank();
+    return t; 
+}
+
+Tank *get_tank(){
+
+}
+

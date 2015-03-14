@@ -3,6 +3,8 @@
  *
  *  Created on: Aug 27, 2011
  *      Author: cty
+ *  Copyright (c) 2014 evilbinary.org. All rights reserved.
+ *     rootntsd@gmail.com
  */
 
 #include "game.h"
@@ -89,7 +91,7 @@ void Game::Init() {
 	if (chunk != NULL)
 		chunk->volume = 25;
 
-	for (int i = 0; i < 12; i++) {
+	for (int i = 0; i < 1; i++) {
 		Tank t;
 		t.SetBullets(&bullets);
 		t.RandPos();
@@ -129,7 +131,7 @@ void Game::Init() {
 		o.SetType(5);
 		objects.push_back(o);
 	}
-	tanks.begin()->SetType(6);
+	//tanks.begin()->SetType(6);
 	//	this->background = resourceManager.GetResourceByName("bg");
 	this->alpha = SDL_ALPHA_OPAQUE;
 	//	cout<<"res size:"<<resourceManager.GetSize()<<endl;
